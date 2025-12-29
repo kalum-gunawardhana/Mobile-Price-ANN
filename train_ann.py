@@ -21,3 +21,10 @@ X_train, X_test, y_train, y_test = train_test_split(
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
+
+# ann model
+model = Sequential()
+model.add(Dense(8, activation='relu', input_shape=(X_train.shape[1],)))
+model.add(Dense(4, activation='relu'))
+model.add(Dense(1, activation='sigmoid'))
+
