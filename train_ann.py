@@ -28,3 +28,10 @@ model.add(Dense(8, activation='relu', input_shape=(X_train.shape[1],)))
 model.add(Dense(4, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
+# complile
+model.compile(
+    optimizer='adam',
+    loss='binary_crossentropy',
+    metrics=['accuracy']
+)
+
