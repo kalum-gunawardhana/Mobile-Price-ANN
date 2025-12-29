@@ -16,3 +16,8 @@ y = data['price_range']
 # train-test split (75% train, 25% test)
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.25, random_state=42)
+
+# feature scaling
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
