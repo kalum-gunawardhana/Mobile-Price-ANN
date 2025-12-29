@@ -50,5 +50,5 @@ loss, accuracy = model.evaluate(X_test, y_test)
 print("Test Accuracy:", accuracy)
 
 # 9. Save weights
-model.save_weights("mobile_price_ann_weights.h5")
+model.save_weights("mobile_price_ann.weights.h5")
 print("Weights saved successfully!")
