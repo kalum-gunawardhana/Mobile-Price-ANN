@@ -43,3 +43,6 @@ model.fit(
     batch_size=32,
     validation_data=(X_test, y_test)
 )
+
+# evaluate
+loss, accuracy = model.evaluate(X_test, y_test)
