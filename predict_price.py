@@ -21,9 +21,11 @@ model.add(Dense(1, activation='sigmoid'))
 # Load trained weights
 model.load_weights("mobile_price_ann.weights.h5")
 
-# New mobile phone data (example)
-# Order must match dataset columns exactly
-new_mobile = np.array([[8, 128, 4, 1, 0, 1, 0, 1, 1, 0]])
+# New mobile (20 features)
+new_mobile = [[
+    1800, 1, 2.5, 1, 12, 1, 128, 0.6, 170, 8,
+    16, 900, 1800, 8192, 15, 7, 18, 1, 1, 1
+]]
 
 # Scale input
 new_mobile_scaled = scaler.transform(new_mobile)
