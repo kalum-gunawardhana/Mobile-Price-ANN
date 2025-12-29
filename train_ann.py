@@ -12,3 +12,7 @@ print(data.head())
 # split features and target
 x = data.drop('price_range', axis=1)
 y = data['price_range']
+
+# train-test split (75% train, 25% test)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.25, random_state=42)
